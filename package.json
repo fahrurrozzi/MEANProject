@@ -9,6 +9,7 @@
     "connect": "^3.6.5",
     "ejs": "latest",
     "express": "latest",
+    "express-session": "latest",
     "method-override": "latest",
     "morgan": "latest"
   },
