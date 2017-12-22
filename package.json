@@ -11,6 +11,7 @@
     "express": "latest",
     "express-session": "latest",
     "method-override": "latest",
+    "mongoose": "latest",
     "morgan": "latest"
   },
   "devDependencies": {},
