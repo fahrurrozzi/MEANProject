@@ -4,10 +4,11 @@
   "description": "This is a MEAN Project in the history of Inspiring Developer",
   "main": "index.js",
   "dependencies": {
-    "connect": "^3.6.5",
-    "express": "latest",
-    "body-parser": "latest",
+    "body-parser": "^1.18.2",
     "compression": "latest",
+    "connect": "^3.6.5",
+    "ejs": "^2.5.7",
+    "express": "latest",
     "method-override": "latest",
     "morgan": "latest"
   },
