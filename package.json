@@ -7,7 +7,7 @@
     "body-parser": "^1.18.2",
     "compression": "latest",
     "connect": "^3.6.5",
-    "ejs": "^2.5.7",
+    "ejs": "latest",
     "express": "latest",
     "method-override": "latest",
     "morgan": "latest"
