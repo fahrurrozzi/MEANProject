@@ -5,7 +5,11 @@
   "main": "index.js",
   "dependencies": {
     "connect": "^3.6.5",
-    "express": "^4.16.2"
+    "express": "latest",
+    "body-parser": "latest",
+    "compression": "latest",
+    "method-override": "latest",
+    "morgan": "latest"
   },
   "devDependencies": {},
   "scripts": {
@@ -15,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/fahrurrozzi/MEANProject.git"
   },
-  "author": "",
+  "author": "Inspiring Developer",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fahrurrozzi/MEANProject/issues"

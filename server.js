@@ -1,10 +1,7 @@
-var http = require ('http');
+var express = require('./config/express');
 
-http.createServer(function(req, res){
-	res.writeHead(200, {
-		'Content-type':'text/plain'
-	});
-	res.end('Hello World');
-}).listen(3000);
+var app = express();
+app.listen(3000);
+module.exports = app;
 
 console.log('Server running at http://localhost:3000/');
