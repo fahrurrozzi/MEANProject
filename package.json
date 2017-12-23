@@ -6,15 +6,18 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "compression": "latest",
-    "connect": "^3.6.5",
+    "connect-flash": "latest",
+    "connect": "latest",
     "ejs": "latest",
     "express": "latest",
     "express-session": "latest",
+    "express-flash": "latest",
     "method-override": "latest",
     "mongoose": "latest",
     "morgan": "latest",
     "passport": "latest",
-    "passport-local": "latest"
+    "passport-local": "latest",
+    "passport-facebook": "latest"
   },
   "devDependencies": {},
   "scripts": {

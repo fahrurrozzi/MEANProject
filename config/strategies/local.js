@@ -1,4 +1,4 @@
-const passconst passport = require('passport');
+const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('mongoose').model('User');
 
@@ -13,7 +13,7 @@ module.exports = function (){
 			}
 			if(!user){
 				return done(null, false, {
-					message :'Unknow user'
+					message :'Unknown user'
 				});
 			}
 			if (!user.authenticate(password)){
