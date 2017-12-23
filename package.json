@@ -12,7 +12,9 @@
     "express-session": "latest",
     "method-override": "latest",
     "mongoose": "latest",
-    "morgan": "latest"
+    "morgan": "latest",
+    "passport": "latest",
+    "passport-local": "latest"
   },
   "devDependencies": {},
   "scripts": {
