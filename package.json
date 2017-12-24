@@ -1,10 +1,26 @@
 {
   "name": "meanproject",
   "version": "1.0.0",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "app": "node server",
+    "start": "concurrently \"npm run tsc:w\" \"npm run app\" ",
+    "postinstall": "typings install"
+  },
   "description": "This is a MEAN Project in the history of Inspiring Developer",
   "main": "index.js",
   "dependencies": {
+    "@angular/common": "2.1.1",
+    "@angular/compiler": "2.1.1",
+    "@angular/core": "2.1.1",
+    "@angular/forms": "2.1.1",
+    "@angular/http": "2.1.1",
+    "@angular/platform-browser": "2.1.1",
+    "@angular/platform-browser-dynamic": "2.1.1",
+    "@angular/router": "3.1.1",
     "body-parser": "^1.18.2",
+    "core-js": "2.4.1",
     "compression": "latest",
     "connect-flash": "latest",
     "connect": "latest",
@@ -17,11 +33,17 @@
     "morgan": "latest",
     "passport": "latest",
     "passport-local": "latest",
-    "passport-facebook": "latest"
+    "passport-facebook": "latest",
+    "reflect-metadata": "0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "0.19.39",
+    "zone.js": "0.6.26"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "concurrently": "3.1.0",
+    "traceur": "0.0.111",
+    "typescript": "2.0.3",
+    "typings": "1.4.0"
   },
   "repository": {
     "type": "git",

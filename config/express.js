@@ -60,7 +60,8 @@
 // 	return app;
 // };
 
-var config = require('./config'),
+var path = require('path'),
+	config = require('./config'),
 	express = require('express'),
 	morgan = require('morgan'),
 	compress = require('compression'),
@@ -107,12 +108,17 @@ module.exports = function() {
 	app.use(passport.initialize());
 	app.use(passport.session());
 
+	
+
+	// Configure static file serving
+	app.use('/', express.static(path.resolve('./public')));
+
+
+	app.use('/lib', express.static(path.resolve('./node_modules')));
+
 	// Load the routing files
 	require('../app/routes/index.server.routes.js')(app);
 	require('../app/routes/users.server.routes.js')(app);
-
-	// Configure static file serving
-	app.use(express.static('./public'));
 
 	// Return the Express application instance
 	return app;

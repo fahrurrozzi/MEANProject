@@ -39,18 +39,24 @@ var users = require('../../app/controllers/users.server.controller'),
 // Define the routes module' method
 module.exports = function(app) {
 	// Set up the 'signup' routes 
-	app.route('/signup')
-	   .get(users.renderSignup)
-	   .post(users.signup);
+	// app.route('/signup')
+	//    .get(users.renderSignup)
+	//    .post(users.signup);
+
+	app.route('/api/auth/signup').post(users.signup);
+	app.route('/api/auth/signin').post(users.signin);
+	app.route('/api/auth/signout').get(users.signout);
+
+
 
 	// Set up the 'signin' routes 
-	app.route('/signin')
-	   .get(users.renderSignin)
-	   .post(passport.authenticate('local', {
-			successRedirect: '/',
-			failureRedirect: '/signin',
-			failureFlash: true
-	   }));
+	// app.route('/signin')
+	//    .get(users.renderSignin)
+	//    .post(passport.authenticate('local', {
+	// 		successRedirect: '/',
+	// 		failureRedirect: '/signin',
+	// 		failureFlash: true
+	//    }));
 
 	// Set up the Facebook OAuth routes 
 	app.get('/oauth/facebook', passport.authenticate('facebook', {
@@ -84,5 +90,19 @@ module.exports = function(app) {
 	// }));
 
 	// Set up the 'signout' route
-	app.get('/signout', users.signout);
+	// app.get('/signout', users.signout);
 };
+
+
+// from index.ejs
+// <!-- <body>
+// 		<% if ( userFullName ) { %>
+// 			<h2>Hello <%=userFullName%> </h2>
+// 			<a href="/signout">Sign out</a>
+// 		<% } else { %>
+// 			<a href="/signup">Signup</a>
+// 			<a href="/signin">Signin</a>
+// 		<% } %>
+// 		<br>
+// 			<img src="img/logo.png" alt="Logo">
+// 	</body> -->
